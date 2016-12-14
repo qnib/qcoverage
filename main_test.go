@@ -99,6 +99,7 @@ func TestGetLines(t *testing.T) {
 		return
 	}
 	exp := []string{
+                "mode: set",
 		"src/collectors/0/docker_engine.py:2.0,2.50 1 1",
 		"src/collectors/0/docker_engine.py:4.0,4.50 1 1",
 		"src/collectors/0/docker_engine.py:5.0,5.50 1 1",

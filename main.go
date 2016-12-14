@@ -55,7 +55,7 @@ type Coverage struct {
 
 // GetLines transforms each line into a string
 func GetLines(c Coverage) []string {
-	var ret []string
+	ret := []string{"mode: set"}
 	for _, pkg := range c.Packages {
 		for _, cl := range pkg.Classes {
 			for _, l := range cl.Lines {
