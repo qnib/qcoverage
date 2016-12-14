@@ -1,0 +1,12 @@
+build:
+  image: qnib/golang
+  commands:
+    - go get -d
+    - go build
+    - go get github.com/stretchr/testify/assert
+    - go test -cover -coverprofile=coverage.out .
+
+publish:
+  coverage:
+    server: http://wins.ddns.net:8008
+    token: $$GITHUB_API_KEY
